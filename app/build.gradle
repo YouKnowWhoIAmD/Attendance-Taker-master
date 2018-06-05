@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "in.darbose.classroom"
+        minSdkVersion 16
+        targetSdkVersion 22
+        versionCode 11
+        versionName "2.2.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        encoding "UTF-8"
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    //support lib
+    implementation 'com.android.support:appcompat-v7:22.2.0'
+    //design
+    implementation 'com.android.support:design:22.2.0'
+    //excel
+    implementation 'org.apache.poi:poi:3.12'
+    //graph
+    implementation 'com.jjoe64:graphview:4.0.1'
+    //yoyo
+    implementation 'com.nineoldandroids:library:2.4.0'
+    implementation 'com.daimajia.easing:library:1.0.1@aar'
+    implementation 'com.daimajia.androidanimations:library:1.1.3@aar'
+    implementation 'au.com.bytecode:opencsv:2.4'
+}
